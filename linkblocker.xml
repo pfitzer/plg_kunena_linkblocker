@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE extension>
+<extension version="2.5" type="plugin" group="kunena" method="upgrade">
+    <name>Kunena - Linkblocker</name>
+    <version>1.0</version>
+    <creationDate>2012-09-02</creationDate>
+    <author>Michael Pfister</author>
+    <authorEmail>info@mp-development.de</authorEmail>
+    <authorUrl>http://www.mp-development.de</authorUrl>
+    <copyright>www.mp-development.de</copyright>
+    <license>GNU/GPLv3 or later</license>
+    <description>PLG_KUNENA_LINKBLOCKER_DESCRIPTION</description>
+    <files>
+        <filename plugin="linkblocker">linkblocker.php</filename>
+        <filename>index.html</filename>
+        <folder>language</folder>
+    </files>
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field name="register"
+                        type="list"
+                        default="0"
+                        label="PLG_KUNENA_LINKBLOCKER_REGISTER"
+                        description="PLG_KUNENA_LINKBLOCKER_REGISTER_DESC">
+                    <option value="0">PLG_KUNENA_LINKBLOCKER_JOOMLA</option>
+                    <option value="1">PLG_KUNENA_LINKBLOCKER_JOMSOCIAL</option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+</extension>
