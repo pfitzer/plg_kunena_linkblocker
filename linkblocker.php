@@ -25,6 +25,7 @@ class plgKunenaLinkblocker extends JPlugin {
     public function __construct(&$subject, $config)
     {
         $user =& JFactory::getUser();
+
         // Do not load if Kunena version is not supported or Kunena is offline
         if (!(class_exists('KunenaForum') && KunenaForum::isCompatible('2.0') && KunenaForum::installed())) return;
 
@@ -47,8 +48,11 @@ class plgKunenaLinkblocker extends JPlugin {
      */
     public function onContentPrepare($context, &$row, &$params, $page = 0)
     {
-
-        $row->text = preg_replace(self::REGEX, $this->_getReplaceLink(), $row->text);
+        if ($params instanceof JRegistry) {
+            if ($params->get('ksource') == 'kunena') {
+                $row->text = preg_replace(self::REGEX, $this->_getReplaceLink(), $row->text);
+            }
+        }
 
         return true;
     }

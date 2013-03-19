@@ -2,8 +2,8 @@
 <!DOCTYPE extension>
 <extension version="2.5" type="plugin" group="kunena" method="upgrade">
     <name>Kunena - Linkblocker</name>
-    <version>1.0</version>
-    <creationDate>2012-09-02</creationDate>
+    <version>1.0.1</version>
+    <creationDate>2013-19-03</creationDate>
     <author>Michael Pfister</author>
     <authorEmail>info@mp-development.de</authorEmail>
     <authorUrl>http://www.mp-development.de</authorUrl>
