@@ -29,7 +29,7 @@ class plgKunenaLinkblocker extends JPlugin {
         if (!(class_exists('KunenaForum') && KunenaForum::isCompatible('2.0') && KunenaForum::installed())) return;
 
         $app =& JFactory::getApplication();
-        if ($app->isAdmin() || 'com_kunena' != $app->scope || 0 == $user->guest) return;
+        if ($app->isAdmin() || 0 == $user->guest) return;
 
         parent::__construct ( $subject, $config );
 
